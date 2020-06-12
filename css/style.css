@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex; /* EASY CENTERING */
+  height: 100vh; /* Remember to set height to entire viewport */
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none; /* Make compatible with browsers */
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.seat:nth-child(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-child(6) {
+  margin-right: 18px;
+}
+
+.container .seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.legend li {
+  display: flex;
+  padding: 15px 15px;
+}
+
+.legend li small {
+  margin-left: 2px;
+}
+
+.legend {
+  background: rgba(0,0,0,0.1);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  color: #777;
+}
+
+.screen-container {
+  display: flex;
+  justify-content: center;
+  perspective: 700px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.screen {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: #fff;
+  height: 70px;
+  width: 200px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
